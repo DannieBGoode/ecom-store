@@ -1,0 +1,84 @@
+{
+    "ships": [
+            {
+                "id": "1",
+                "name": "Ship1",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg"
+            },
+            {
+                "id": "2",
+                "name": "Ship2",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg"
+            },
+            {
+                "id": "3",
+                "name": "Ship3",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm7.staticflickr.com/6139/5986939269_10721b8017.jpg"
+            },
+            {
+                "id": "4",
+                "name": "Ship4",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg"
+            },
+            {
+                "id": "5",
+                "name": "Ship5",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg"
+            },
+            {
+                "id": "6",
+                "name": "Ship6",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm7.staticflickr.com/6139/5986939269_10721b8017.jpg"
+            },
+            {
+                "id": "7",
+                "name": "Ship7",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg"
+            },
+            {
+                "id": "8",
+                "name": "Ship8",
+                "specification": "placeholder",
+                "detail": "random details",
+                "passengers": 10,
+                "colors": ["red", "blue", "black"],
+                "description": "This is the description of the ship, .... ",
+                "image": "https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg"
+            }
+    ]
+}

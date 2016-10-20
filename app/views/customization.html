@@ -1,0 +1,40 @@
+<p>Customization</p>
+
+<div class="row">
+    <div class="square col-md-4" style="background-image: url({{customization.ship.image}})">
+        <div class="ship-label">{{customization.ship.name}}</div>
+    </div>
+
+    <div class="square col-md-6" style="height:0px;width: 60%">
+        <div id="map" style="height:230px"></div>
+    </div>
+
+    <script>
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.2),
+            zoom: 10
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <div class="col-md-4"></div>
+</div>
+
+<div class="row ship-controls">
+  <div class="col-md-4">
+    <div class="form-group">
+        <label>Passengers</label>
+        <select class="form-control">
+            <option ng-repeat="i in customization.ship.passengersArray"><span>{{i}}</span></option>
+        </select>
+    </div>
+  </div>
+</div>
+
+<div class="ship-controls">
+    <a href="#/ships">< Back to List </a>
+    <a class="btn btn-default" role="button">Buy it</a>
+</div>

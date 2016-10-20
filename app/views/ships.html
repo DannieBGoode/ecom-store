@@ -1,0 +1,12 @@
+<!-- <div ng-repeat="ship in ships.ships" class="square" >
+    <div class="content" >
+        <a class="table-cell" ng-href="#/ships/{{ship.id}}">
+			<div style="'background-image': ships.ship.image"></div>
+        </a>
+    </div>
+    <div class="ship-label">{{ships.ship.name}}</div>
+</div> -->
+
+<a ng-repeat="ship in ships.ships" class="square img_1-1" ng-href="#/ships/{{ship.id}}" style="background-image: url({{ship.image}})">
+    <div class="ship-label">{{ship.name}}</div>
+</a>
