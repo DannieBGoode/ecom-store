@@ -93,6 +93,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 250px;
 }
 .ship-title {
     text-align: center;
