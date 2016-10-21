@@ -10,6 +10,9 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="libs/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="libs/bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css" />
+    <link rel="stylesheet" href="libs/bower_components/angular-datepicker/dist/angular-datepicker.css" />
+    <link rel="stylesheet" href="libs/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+    <link rel="stylesheet" href="libs/bower_components/angular-colorpicker-directive/css/color-picker.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,41 +24,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Test</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-2" style="display:inline-block" ng-controller="sideTabsCtrl"> <!-- required for floating -->
-      <!-- Nav tabs -->
+    <div class="col-xs-2" style="display:inline-block">
       <ul class="nav nav-tabs tabs-left">
-        <li ng-class="{'active': activeTab === 'ships'}" ng-click="activeTab = ships"><a ng-href="#/ships" data-toggle="tab">Ships</a></li>
-        <li ng-class="{'active': activeTab === 'information'}" ng-click="activeTab = 'information'"><a href="#profile" data-toggle="tab">Profile</a></li>
-        <li ng-class="{'active': activeTab === 'customization'}" ng-click="activeTab = 'customization'"><a href="#messages" data-toggle="tab">Messages</a></li>
+        <li ng-class="{'active': activeTab === 'ships'}"><a ng-href="#/ships">Ships</a></li>
+        <li ng-class="{'active':( activeTab === 'information')}"><a ng-href="#/ships/{{lastShip}}">Information</a></li>
+        <li ng-class="{'active': (activeTab === 'customization')}"><a ng-href="#/customization/{{lastShip}}">Customization</a></li>
       </ul>
     </div>
-
-    <!-- <div class="col-xs-9">
-        <div class="tab-content">
-          <div class="tab-pane active" id="home">Home Tab.</div>
-          <div class="tab-pane" id="profile">Profile Tab.</div>
-          <div class="tab-pane" id="messages">Messages Tab.</div>
-        </div>
-    </div> -->
 
     <div class="container main-body" style="display:inline-block">
     <div ng-view=""></div>
@@ -91,16 +66,21 @@
     <script src="libs/bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="libs/bower_components/angular-touch/angular-touch.js"></script>
     <script src="libs/bower_components/lodash/lodash.js"></script>
+    <script src="libs/bower_components/moment/moment.js"></script>
+    <script src="libs/bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="libs/bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+    <script src="libs/bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script src="libs/bower_components/angular-colorpicker-directive/js/color-picker.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/side-tabs.js"></script>
-        <script src="scripts/controllers/ships.js"></script>
-        <script src="scripts/controllers/information.js"></script>
-        <script src="scripts/controllers/customization.js"></script>
-        <script src="scripts/services/ships.service.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <!-- <script src="scripts/controllers/side-tabs.js"></script> -->
+    <script src="scripts/controllers/ships.js"></script>
+    <script src="scripts/controllers/information.js"></script>
+    <script src="scripts/controllers/customization.js"></script>
+    <script src="scripts/services/ships.service.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
