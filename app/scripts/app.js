@@ -21,30 +21,31 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      // .when('/', {
-      //   templateUrl: 'views/main.html',
-      //   controller: 'MainCtrl',
-      //   controllerAs: 'main',
-      //   activetab: 'home'
-      // })
       .when('/ships', {
         templateUrl: 'views/ships.html',
         controller: 'ShipsCtrl',
         controllerAs: 'ships',
-        activetab: 'ships'
+        activeTab: 'ships'
       })
       .when('/ships/:id', {
         templateUrl: 'views/information.html',
         controller: 'ShipCtrl',
         controllerAs: 'information',
-        activetab: 'information'
+        activeTab: 'information'
       })
       .when('/customization/:id', {
         templateUrl: 'views/customization.html',
         controller: 'customizationCtrl',
-        controllerAs: 'customization'
+        controllerAs: 'customization',
+        activeTab: 'customization'
       })
       .otherwise({
         redirectTo: '/ships'
       });
+  })
+  .run(function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $rootScope.activeTab = toState.activeTab;
+      $rootScope.lastShip = toState.params.id || '';
+    });
   });

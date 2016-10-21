@@ -24,30 +24,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-<!--     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Test</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="col-xs-2" style="display:inline-block" ng-controller="sideTabsCtrl">
+    <div class="col-xs-2" style="display:inline-block">
       <ul class="nav nav-tabs tabs-left">
-        <li ng-class="{'active': view_tab === 'ships'}" ng-click="changeTab('ships')"><a data-toggle="tab" ng-href="#/ships">Ships</a></li>
-        <li ng-class="{'active':( view_tab === 'information')}" ng-click="changeTab('information')"><a data-toggle="tab">Information</a></li>
-        <li ng-class="{'active': (view_tab === 'customization')}" ng-click="changeTab('customization')"><a data-toggle="tab">Customization</a></li>
+        <li ng-class="{'active': activeTab === 'ships'}"><a ng-href="#/ships">Ships</a></li>
+        <li ng-class="{'active':( activeTab === 'information')}"><a ng-href="#/ships/{{lastShip}}">Information</a></li>
+        <li ng-class="{'active': (activeTab === 'customization')}"><a ng-href="#/customization/{{lastShip}}">Customization</a></li>
       </ul>
     </div>
 
@@ -95,7 +76,7 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/side-tabs.js"></script>
+    <!-- <script src="scripts/controllers/side-tabs.js"></script> -->
     <script src="scripts/controllers/ships.js"></script>
     <script src="scripts/controllers/information.js"></script>
     <script src="scripts/controllers/customization.js"></script>
