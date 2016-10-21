@@ -30,6 +30,10 @@ module.exports = function(config) {
       'app/libs/bower_components/angular-sanitize/angular-sanitize.js',
       'app/libs/bower_components/angular-touch/angular-touch.js',
       'app/libs/bower_components/lodash/lodash.js',
+      'app/libs/bower_components/moment/moment.js',
+      'app/libs/bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js',
+      'app/libs/bower_components/angular-datepicker/dist/angular-datepicker.js',
+      'app/libs/bower_components/bootstrap-switch/dist/js/bootstrap-switch.js',
       'app/libs/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
