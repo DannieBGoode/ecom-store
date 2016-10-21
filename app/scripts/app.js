@@ -19,7 +19,7 @@ angular
     'datePicker',
     'colorpicker'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/ships', {
         templateUrl: 'views/ships.html',
