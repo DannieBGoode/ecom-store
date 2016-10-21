@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'datePicker'
+    'datePicker',
+    'colorpicker'
   ])
   .config(function ($routeProvider) {
     $routeProvider

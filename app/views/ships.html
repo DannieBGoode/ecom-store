@@ -6,7 +6,9 @@
     </div>
     <div class="ship-label">{{ships.ship.name}}</div>
 </div> -->
+<div ng-repeat="ship in ships.ships">
+    <a class="square" ng-href="#/ships/{{ship.id}}" style="background-image: url({{ship.image}})">
+        <div class="square ship-label">{{ship.name}}</div>
+    </a>
 
-<a ng-repeat="ship in ships.ships" class="square img_1-1" ng-href="#/ships/{{ship.id}}" style="background-image: url({{ship.image}})">
-    <div class="ship-label">{{ship.name}}</div>
-</a>
+</div>

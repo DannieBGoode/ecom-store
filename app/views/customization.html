@@ -1,15 +1,11 @@
-<p>Customization</p>
+<h3>Customization</h3>
 
 <div class="row">
-    <div class="square col-md-4" style="background-image: url({{customization.ship.image}})">
-        <div class="ship-label">{{customization.ship.name}}</div>
-    </div>
+    <div class="square col-md-4" style="background-image: url({{customization.ship.image}})"></div>
 
-    <div class="square col-md-6" style="height:0px;width: 60%">
+    <div class="square col-md-8" style="height:0px;width: 60%">
         <div id="map" style="height:230px"></div>
-
     </div>
-    <!-- <div class="ship-label">Ship Location</div> -->
 
     <script>
         function myMap() {
@@ -22,49 +18,62 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-    <div class="col-md-4"></div>
 </div>
 
-<div class="row ship-controls">
-        <div class="col-md-4">
-        <div class="form-group">
+<div class="row">
+    <div class="col-md-4">
+        <div class="ship-title">{{customization.ship.name}}</div>
+    </div>
+    <div class="col-md-8">
+        <div class="ship-title">Ship Location</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <p><b>Ship Color</b></p>
+            <input color-picker color-picker-model="var"/>
+          </div>
+          <div class="form-group">
+            <p><b>Install Interstellar Turbo Boost</b></p>
+            <input type="checkbox" name="my-checkbox" checked>
+          </div>
+          <div class="form-group">
+            <p><b>Enable Detection</b></p>
+            <input type="checkbox" name="my-checkbox" checked>
+          </div>
+          <div class="form-group passenger-list">
             <label>Passengers</label>
             <select class="form-control">
                 <option ng-repeat="i in customization.ship.passengersArray"><span>{{i}}</span></option>
             </select>
+          </div>
+          <div class="form-group">
+            <p><b>Reservation Date</b></p>
+            <input date-time ng-model="pickedDate"/>
+          </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <div class="row ship-controls active-buttons">
+            <div class="col-md-12">
+                <a class="btn btn-success" role="button">Reserve</a>
+            </div>
+            <div class="col-md-12">
+                <a class="btn btn-success" role="button">Build for me</a>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <label>Time</label>
-        <input date-time ng-model="pickedDate"/>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <p>Super Turbo</p>
-        <input type="checkbox" name="my-checkbox" checked>
-    </div>
-    <div class="col-md-4">
-        <p>Super Turbo2</p>
-        <input type="checkbox" name="my-checkbox" checked>
     </div>
 </div>
 
 <div class="ship-controls">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <a class="btn btn-default" role="button">Reserve</a>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-4">
             <a href="#/ships">< Back to List </a>
         </div>
         <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <a class="btn btn-default" role="button">Build it</a>
-        </div>
+        <div class="col-md-4"></div>
     </div>
 </div>

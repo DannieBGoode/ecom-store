@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="libs/bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css" />
     <link rel="stylesheet" href="libs/bower_components/angular-datepicker/dist/angular-datepicker.css" />
     <link rel="stylesheet" href="libs/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+    <link rel="stylesheet" href="libs/bower_components/angular-colorpicker-directive/css/color-picker.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -24,7 +25,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+<!--     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -40,11 +41,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="col-xs-2" style="display:inline-block" ng-controller="sideTabsCtrl">
       <ul class="nav nav-tabs tabs-left">
-        <li ng-class="{'active': view_tab === 'ships'}" ng-click="changeTab('ships')"><a data-toggle="tab">Ships</a></li>
+        <li ng-class="{'active': view_tab === 'ships'}" ng-click="changeTab('ships')"><a data-toggle="tab" ng-href="#/ships">Ships</a></li>
         <li ng-class="{'active':( view_tab === 'information')}" ng-click="changeTab('information')"><a data-toggle="tab">Information</a></li>
         <li ng-class="{'active': (view_tab === 'customization')}" ng-click="changeTab('customization')"><a data-toggle="tab">Customization</a></li>
       </ul>
@@ -88,6 +89,7 @@
     <script src="libs/bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
     <script src="libs/bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
     <script src="libs/bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script src="libs/bower_components/angular-colorpicker-directive/js/color-picker.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

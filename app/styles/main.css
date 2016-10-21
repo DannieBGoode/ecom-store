@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  margin-top: 3%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -87,18 +88,23 @@ body {
     float:left;
     position: relative;
     width: 30%;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    padding-bottom : 30%;
+    margin: 1.66%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ship-title {
+    text-align: center;
+    font-weight: bold;
 }
 .ship-label{
-    position: relative;
-    top: 200px;
     text-align: center;
-    color: white;
     font-weight: bold;
+    position: relative;
+    color: black;
+    top: 295px;
+    left: 33%;
 }
 .ship-description {
     margin-top: 100px;
@@ -106,9 +112,13 @@ body {
 .ship-controls {
   margin: 5%;
 }
+.ship-controls.active-buttons{
+  margin-top:50%;
+}
 .ship-controls .btn{
   float: right;
   margin-bottom: 5px;
+  width: 150px;
 }
 .sidetabs {
   margin-top: 10%;
@@ -120,4 +130,14 @@ body {
   border: 1px solid #ddd;
   margin-bottom: 10%;
 }
-
+.passenger-list{
+  width:33%;
+}
+.information-table th{
+  background-color: #eee;
+  border: 2px solid black;
+}
+.information-table td{
+  border: 2px solid black;
+  border-bottom: 0;
+}
