@@ -141,3 +141,6 @@ body {
   border: 2px solid black;
   border-bottom: 0;
 }
+.tabs-left>li.active>a, .tabs-left>li.active>a:hover, .tabs-left>li.active>a:focus {
+  border-right-color: #ddd;
+}

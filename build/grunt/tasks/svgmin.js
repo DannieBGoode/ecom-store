@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
-  grunt.config.set('imagemin', {
+  grunt.config.set('svgmin', {
     dist: {
       files: [{
         expand: true,
         cwd: '<%= yeoman.app %>/images',
-        src: '{,*/}*.{png,jpg,jpeg,gif}',
+        src: '{,*/}*.svg',
         dest: '<%= yeoman.dist %>/images'
       }]
     }
