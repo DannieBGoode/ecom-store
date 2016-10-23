@@ -1,0 +1,7 @@
+{
+  "app": "app",
+  "build": "build",
+  "dist": "dist",
+  "test": "test",
+  "grunt": "Gruntfile.js"
+}

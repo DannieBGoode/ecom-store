@@ -93,6 +93,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 250px;
 }
 .ship-title {
     text-align: center;
@@ -103,7 +104,6 @@ body {
     font-weight: bold;
     position: relative;
     color: black;
-    top: 295px;
     left: 33%;
 }
 .ship-description {
@@ -112,10 +112,10 @@ body {
 .ship-controls {
   margin: 5%;
 }
-.ship-controls.active-buttons{
+.ship-controls.active-buttons {
   margin-top:50%;
 }
-.ship-controls .btn{
+.ship-controls .btn {
   float: right;
   margin-bottom: 5px;
   width: 150px;
@@ -123,21 +123,31 @@ body {
 .sidetabs {
   margin-top: 10%;
 }
-.tabs-left{
+.tabs-left {
   border-right: 0px;
 }
-.main-body{
+.main-body {
   border: 1px solid #ddd;
   margin-bottom: 10%;
 }
-.passenger-list{
+.passenger-list {
   width:33%;
 }
-.information-table th{
+.information-table th {
   background-color: #eee;
   border: 2px solid black;
 }
-.information-table td{
+.information-table td {
   border: 2px solid black;
   border-bottom: 0;
+}
+.tabs-left>li.active>a, .tabs-left>li.active>a:hover, .tabs-left>li.active>a:focus {
+  border-right-color: #ddd;
+}
+#map {
+  height: 230px;
+}
+.map-area {
+  height:0px;
+  width: 60%
 }

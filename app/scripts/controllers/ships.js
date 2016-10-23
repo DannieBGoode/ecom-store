@@ -8,9 +8,11 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('ShipsCtrl', [ 'shipsSvc', function (shipsSvc) {
-  	var self = this;
-	shipsSvc.getShips().then(function(ships){
-		self.ships = ships;
-	});
+  .controller('ShipsCtrl', ['shipsSvc', function(shipsSvc) {
+    var self = this;
+
+    shipsSvc.getShips().then(
+        function(ships) {
+          self.ships = ships;
+        });
   }]);
