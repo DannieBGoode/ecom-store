@@ -9,6 +9,7 @@ module.exports = function(grunt) {
         src: [
           '*.{ico,png,txt}',
           '*.html',
+          'mockdata/*.json',
           'images/{,*/}*.{webp}',
           'styles/fonts/{,*/}*.*'
         ]
